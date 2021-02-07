@@ -26,7 +26,9 @@ if dxvk_compiler.get_id() == 'clang'
   endif
 endif
 
-dxvk_include_path = include_directories('./include')
+dxvk_include_path = include_directories('./include',
+  '/usr/i686-w64-mingw32/sys-root/mingw/include',
+  '/usr/x86_64-w64-mingw32/sys-root/mingw/include')
 
 if (cpu_family == 'x86_64')
   dxvk_library_path = meson.source_root() + '/lib'
